@@ -1,0 +1,16 @@
+miniprogram/pages/demo/demo.wxml
+<text>miniprogram/pages/demo/demo.wxml</text>
+<text>{{openid}}</text>
+
+
+<button bind:tap="getMusicInfo">Music</button>
+<button bind:tap="getMovieInfo">Movie</button>
+
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<open-data type="userCountry"></open-data>
+<open-data type="userCity"></open-data>
+
+<button open-type="getUserInfo" bindgetuserinfo="onUserInfo">获取用户信息</button>
+
+<button bindtap="getOpenid">获取openid</button>

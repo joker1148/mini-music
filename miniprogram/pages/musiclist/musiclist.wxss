@@ -1,0 +1,32 @@
+.header{
+  width: 750rpx;
+  height: 320rpx;
+  position: relative;
+  overflow: hidden;
+}
+.container{
+  width: 750rpx;
+  height: 750rpx;
+  filter: blur(15px);
+}
+.img{
+  width: 280rpx;
+  height: 280rpx;
+  position: absolute;
+  top: 50%;
+  transform: translate(20rpx,-50%);
+  border-radius: 5%;
+  
+}
+.text{
+  width: 450rpx;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+  font-size: 35rpx;
+  color: #fff;
+  line-height: 60rpx;
+}

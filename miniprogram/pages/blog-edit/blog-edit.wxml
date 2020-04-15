@@ -1,0 +1,24 @@
+<!--pages/blog-edit/blog-edit.wxml-->
+<view class="container">
+  <view class="input">
+    <textarea auto-height placeholder="请输入评论" 
+    bindinput="getValueLength" bindfocus="foucus" bindblur="outfocus"/>
+  </view>
+  
+  <view class="image">
+    <block wx:for="{{imgData}}" wx:key="*this">
+      <view class="image-detail">
+        <image src="{{item}}" class="imgs" mode="aspectFill"
+        data-index="{{index}}"
+        bindtap="onPreviewImg"></image>
+        <icon class="iconfont icon-shanchu1" bind:tap="close" data-index="{{index}}"></icon>            
+      </view>
+    </block>
+    <view class="image-detail" bindtap="chooseImg" wx:if="{{imgData.length ==9?false:true}}">+</view>
+  </view>
+
+  <view class="footer" style="bottom:{{height}}px">
+    <text class="words-num">{{fontLength}}</text>
+    <view class="send-btn" bind:tap="send">发布</view>
+  </view>
+</view>

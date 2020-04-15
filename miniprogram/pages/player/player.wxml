@@ -1,0 +1,25 @@
+<!--pages/player/player.wxml-->
+<view class="bgc" style="background:url({{url}}) center/cover no-repeat"></view>
+<view class="gray"></view>
+
+<view class="player-info">
+  <view class="container-image " animation="{{animation}}">
+    <view class="singCircle  {{isPlaying?'play':''}}" bindtap="onChangeLyricShow" hidden="{{isLyricShow}}">
+      <view class="player-center-image ">
+        <image src="{{url}}" class="player-image-detail rotation {{isPlaying?'':'notRotation'}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <x-lyric class="lyric" isLyricShow="{{!isLyricShow}}" bindtap="onChangeLyricShow" lyric="{{lyric}}"/>
+
+  <view class="progress" >
+    <x-progress bind:musicEnd="nextSong" bind:timeUpdate="timeUpdate" isSame="{{isSame}}"></x-progress>
+  </view>
+
+  <view class="button" >
+    <icon class="iconfont icon-shangyishoushangyige" bindtap="prevSong"></icon>
+    <icon class="iconfont {{isPlaying? 'icon-zanting1': 'icon-bofang1'}}" bind:tap="togglePlaying"></icon>
+    <icon class="iconfont icon-xiayigexiayishou" bindtap="nextSong"></icon>
+  </view>
+</view>

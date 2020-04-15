@@ -1,0 +1,15 @@
+<!--pages/musiclist/musiclist.wxml-->
+<!-- <text>pages/musiclist/musiclist.wxml</text> -->
+
+<view class="header">
+  <view>
+    <image src="{{coverImgUrl}}" class="container"></image>    
+  </view>
+  <image src="{{coverImgUrl}}" class="img"></image>
+  <view class="text">
+    <view>"韩甜" </view>
+    <view>{{coverName}}</view>
+  </view>
+</view>
+
+<x-musiclist musiclist="{{songList}}" ids="{{id}}"></x-musiclist>

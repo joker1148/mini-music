@@ -1,0 +1,8 @@
+<view class="container" hidden="{{!isBottomShow}}">
+  <view class="bgc"></view>
+  <view class="choose">
+    <i class="iconfont icon-shanchu1" bind:tap="close"></i>  
+    <!-- 插槽slot具名插槽 -->
+    <slot name="modal-content"></slot>
+  </view>
+</view>

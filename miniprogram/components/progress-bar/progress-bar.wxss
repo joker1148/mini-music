@@ -1,0 +1,39 @@
+.ab{
+  width: 100%;
+  bottom:32%;
+}
+.container {
+  width:100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.control {
+  flex: 1;
+}
+
+
+.movable-area{
+  width: 480rpx;
+  height: 36rpx;
+  position: absolute;
+  bottom: -8%;
+}
+.movable-view {
+  width: 36rpx;
+  height: 36rpx;
+  background: #fefefe;
+  border-radius: 50%;
+}
+
+.time {
+  width: 64rpx;
+  /* box-sizing: border-box; */
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  font-family: NotoSansHans-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 30rpx;
+}

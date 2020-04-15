@@ -1,0 +1,8 @@
+<view class="search-container"> 
+  <i class="iconfont icon-fabu" bind:tap="clickEdit"></i>
+  <view class="search-input">
+    <i class="iconfont icon-sousuo"></i>
+    <input placeholder="{{placeholder}}" bindinput="onInput"></input>
+  </view>
+  <view class="search-button" bindtap="onSearch">搜索</view>
+</view>

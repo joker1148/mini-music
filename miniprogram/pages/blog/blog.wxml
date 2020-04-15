@@ -1,0 +1,26 @@
+<view class="search">
+  <x-search bind:change="onChange" class="search-item" bind:search="onSearch"></x-search>
+</view>
+
+<view class="block-card">
+  <block wx:for="{{blogList}}" wx:key="*this" >
+  <!-- 只能在这个页面点击进入详情 -->
+    <x-block-card blog="{{item}}" bind:tap="getMoment"  data-blogid="{{item._id}}" class="bgc"></x-block-card>
+ 
+    <x-blog-ctrl blogid="{{item._id}}" blog="{{item}}"></x-blog-ctrl>
+  </block>
+</view>
+
+
+
+<x-login class="bottom-modal" isBottomShow="{{isBottomShow}}" hidden="{{!isBottomShow}}" 
+bind:loginsuccess="success"
+bind:loginfail="fail"
+bind:close="close">
+  <!-- <view slot="slot2">
+    <view>插槽1</view>
+    <button>按钮</button>
+  </view>
+  <view slot="slot1">插槽2</view> -->
+</x-login>
+
